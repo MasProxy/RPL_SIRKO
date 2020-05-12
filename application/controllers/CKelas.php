@@ -6,16 +6,23 @@ class CKelas extends CI_Controller {
 		parent::__construct();
 		$this->load->library('session');
         $this->load->model('MKelas');
+        $this->load->model('MGedung');
+    }
+
+    public function ambilGedung(){
+        $this->session->set_userdata('data_gedung', $this->MGedung->getAllGedung());
     }
 
     public function ambilKelasGedung(){
-        $id_gedung=0;
+        $id_gedung = $this->input->post('tampungid');
         $this->session->set_userdata('data_kelas', $this->MKelas->getAllKelas($id_gedung));
+        $this->load->view('VKelas');
     }
 
+
 	public function index(){
-        $this->ambilKelasGedung();
-		$this->load->view('VKelas');
+        $this->ambilGedung();
+		$this->load->view('VGedung');
     }
 
     public function ambilKelasPilihan(){

@@ -10,10 +10,10 @@
     <title>Selamat Datang di SIRKO</title>
 </head>
 <body>
-    <?php
-        echo $this->session->userdata('id');
-    ?>
-        
+    <?php echo 'Selamat Datang'. ' '.$this->session->userdata('data_akun')[0]->nama;?>
+    <br>
+    <a href="<?php echo site_url('CKelas');?>" class="btn btn-secondary "role="button" aria-disabled="true">Kembali</a>
+
     <table>
         <thead>
             <tr>

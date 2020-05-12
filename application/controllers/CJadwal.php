@@ -17,6 +17,9 @@ class CJadwal extends CI_Controller {
         $this->ambilJadwalKelas();
 		$this->load->view('VJadwal');
     }
-    
+
+    public function kembali(){
+        $this->load->view('VKelas');
+    }
     
 }
