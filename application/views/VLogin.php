@@ -6,6 +6,7 @@
     <title>Login</title>
 </head>
 <body>
+    <br>Selamat Datang di SIRKO UPI<br>
     <form action="<?php echo site_url('CAkun/verifikasi')?>" method="post">
         Username<br><input class="form-control" type="text" name="username"><br>
         Password<br> <input class="form-control" type="password" name="password"><br>
