@@ -9,11 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
-<body>
-
-
-    <a href="<?php echo site_url('CKelas');?>" class="btn btn-primary "role="button" aria-disabled="true">Kembali</a>
-    <br>
+<body>   
     
     <table>
         <thead>
@@ -47,5 +43,9 @@
         </tbody>
     </table>
     
+    <br><br>
+    
+    <a href="" class="btn btn-primary "role="button" aria-disabled="true">Reservasi Kelas Kosong</a>
+    <a href="<?php echo site_url('CKelas');?>" class="btn btn-secondary "role="button" aria-disabled="true">Kembali</a>
 </body>
 </html>
