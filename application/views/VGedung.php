@@ -21,7 +21,7 @@
             </tr>
         </thead>
         
-        <tbody>
+        <tbody class="table">
             <?php
                 $no=1;
                 foreach($this->session->userdata('data_gedung') as $d){
@@ -41,6 +41,8 @@
             
             ?>
         </tbody>
+
+        <a href="<?php echo site_url('CKelas');?>" class="btn btn-primary "role="button" aria-disabled="true">Kembali</a>
     </table>
 </body>
 </html>

@@ -16,9 +16,9 @@
             <tr>
             <th>No</th>
             <th>Kode Kelas</th>
+            <th>Mata Kuliah</th>
             <th>Jurusan</th>
             <th>Hari</th>
-            <th>Mata Kuliah</th>
             <th>Waktu</th>
             </tr>
         </thead>
@@ -27,25 +27,42 @@
             <?php
                 $no=1;
                 foreach($this->session->userdata('data_jadwal') as $d){
-                    echo'
-                    <tr>
-                        <td>'.$no.'</td>
-                        <td>'.$d->kode_kelas.'</td>
-                        <td>'.$d->jurusan.'</td>
-                        <td>'.$d->hari.'</td>
-                        <td>'.$d->mata_kuliah.'</td>
-                        <td>'.$d->jam_mulai.'-'.$d->jam_selesai.'</td>
-                    </tr>
-                    ';
+                    if($this->session->userdata('data_akun')[0]->jabatan!="admin"){
+                        echo'
+                        <tr>
+                            <td>'.$no.'</td>
+                            <td>'.$d->kode_kelas.'</td>
+                            <td>'.$d->mata_kuliah.'</td>
+                            <td>'.$d->jurusan.'</td>
+                            <td>'.$d->hari.'</td>
+                            <td>'.$d->jam_mulai.'-'.$d->jam_selesai.'</td>
+                        </tr>
+                        ';
+                    }else{
+                        echo'
+                        <tr>
+                            <td>'.$no.'</td>
+                            <td>'.$d->kode_kelas.'</td>
+                            <td>
+                                <form action="'.site_url('CKelas/ambilKelasPilihan').'" method="post">
+                                    <input type="hidden" name = tampungid value="'.$d->id_jadwal.'">
+                                    <input class="form-control-plaintext" type="submit" name="submit" value="'.$d->mata_kuliah.'">
+                                </form>
+                            </td>
+                            <td>'.$d->jurusan.'</td>
+                            <td>'.$d->hari.'</td>
+                            <td>'.$d->jam_mulai.'-'.$d->jam_selesai.'</td>
+                        </tr>
+                        ';
+                    }
                 }
-            
             ?>
         </tbody>
     </table>
 
     <br><br>
     
-    <a href="" class="btn btn-primary "role="button" aria-disabled="true">Reservasi Kelas Kosong</a>
+    <a href="<?php echo site_url('CKelas/masukAjukanReservasi');?>" class="btn btn-primary "role="button" aria-disabled="true">Reservasi Kelas Kosong</a>
     <a href="<?php echo site_url('CJadwal/kembali');?>" class="btn btn-secondary "role="button" aria-disabled="true">Kembali</a>
 </body>
 </html>

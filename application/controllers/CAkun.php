@@ -17,8 +17,8 @@ class CAkun extends CI_Controller {
         $password = $this->input->post('password');
 
         if($this->MAkun->getid($username, $password)!=NULL){
-            $this->session->set_userdata('id', $this->MAkun->getid($username, $password));
-            $this->session->set_userdata('data_akun', $this->MAkun->getdata($this->session->userdata('id')));
+            $this->session->set_userdata('id_akun', $this->MAkun->getid($username, $password));
+            $this->session->set_userdata('data_akun', $this->MAkun->getdata($this->session->userdata('id_akun')));
             redirect(site_url('CKelas'));
         }else{
             redirect(site_url());
