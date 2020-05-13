@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+    table{
+        margin-left:auto; 
+        margin-right:auto;
+    }
+</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selamat Datang di SIRKO</title>
@@ -10,9 +16,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 <body>
-    
-    <?php echo 'Selamat Datang'. ' '.$this->session->userdata('data_akun')[0]->nama;?>
-    <table class="table">
+    <div class="row">
+        <div class="col-sm"><a href="<?php echo site_url('CKelas');?>" class="btn btn-primary "role="button" aria-disabled="true">Kembali</a></div>
+    </div>
+    <div class="col-sm text-center"><?php echo 'Selamat Datang'. ' '.$this->session->userdata('data_akun')[0]->nama;?></div>
+    <br>
+    <br>
+    <table class="table-bordered">
         <thead>
             <tr>
             <th>No</th>
@@ -21,7 +31,7 @@
             </tr>
         </thead>
         
-        <tbody class="table">
+        <tbody class="table-bordered">
             <?php
                 $no=1;
                 foreach($this->session->userdata('data_gedung') as $d){
@@ -42,7 +52,6 @@
             ?>
         </tbody>
 
-        <a href="<?php echo site_url('CKelas');?>" class="btn btn-primary "role="button" aria-disabled="true">Kembali</a>
     </table>
 </body>
 </html>

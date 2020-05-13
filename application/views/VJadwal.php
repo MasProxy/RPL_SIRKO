@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+    body{
+        text-align: center;
+    }
+    table{
+        margin-left:auto; 
+        margin-right:auto;
+    }
+    a{
+        text-align: center;
+    }
+</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jadwal Kelas</title>
@@ -9,9 +21,14 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></head>
 </head>
-<body>   
-<?php echo 'Selamat Datang'. ' '.$this->session->userdata('data_akun')[0]->nama;?>
-    <table class="table">
+<body>
+<a href="<?php echo site_url('CKelas');?>" class="btn btn-primary "role="button" aria-disabled="true">Kembali</a>
+    <div class="row">
+        <div class="col-sm text-center"><?php echo 'Selamat Datang'. ' '.$this->session->userdata('data_akun')[0]->nama;?></div>
+    </div>
+    <br>
+    <br>
+    <table class="table-bordered">
         <thead>
             <tr>
             <th>No</th>
@@ -61,8 +78,8 @@
     </table>
 
     <br><br>
-    
-    <a href="<?php echo site_url('CKelas/masukAjukanReservasi');?>" class="btn btn-primary "role="button" aria-disabled="true">Reservasi Kelas Kosong</a>
-    <a href="<?php echo site_url('CKelas');?>" class="btn btn-secondary "role="button" aria-disabled="true">Kembali</a>
+        <div class="row">
+            <div class="col-sm text-center"><a href="<?php echo site_url('CKelas/masukAjukanReservasi');?>" class="btn btn-primary "role="button" aria-disabled="true">Reservasi Kelas Kosong</a></div>
+        </div>
 </body>
 </html>
