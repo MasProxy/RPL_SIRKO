@@ -12,7 +12,7 @@
 <body>
     
     <?php echo 'Selamat Datang'. ' '.$this->session->userdata('data_akun')[0]->nama;?>
-    <table>
+    <table class="table">
         <thead>
             <tr>
             <th>No</th>
