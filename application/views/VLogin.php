@@ -11,7 +11,7 @@
 <body>
     <div class="row">
         <div class="col-md-1"><a class="navbar-brand" href="#"><img src="images/upi.jpg"></a></div>
-        <div class="col-md-2"><p style="font-size:30px">SIRKO</p><p style="font-size:11px">Universitas Pendidikan Indonesia</p></div>
+        <div class="col-md-2"><p style="font-size:40px">SIRKO</p><p style="font-size:10px">Universitas Pendidikan Indonesia</p></div>
     </div>
     <form action="<?php echo site_url('CAkun/verifikasi')?>" method="post">
         Username<br><input class="form-control" type="text" name="username"><br><br>

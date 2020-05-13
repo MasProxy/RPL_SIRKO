@@ -14,7 +14,7 @@
     <br>
     <a href="<?php echo site_url('CKelas');?>" class="btn btn-secondary "role="button" aria-disabled="true">Kembali</a>
 
-    <table>
+    <table class="table">
         <thead>
             <tr>
             <th>No</th>
