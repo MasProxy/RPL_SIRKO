@@ -29,8 +29,22 @@ class CKelas extends CI_Controller {
         $this->load->view('VAjukanReservasi');
     }
 
-    public function masukLihatReservasi(){
+    public function ambilReservasiUser(){
+        $id=$this->session->userdata('id_akun');
+        $this->session->set_userdata('data_reservasi', $this->MReservasi->getUserReservasi($id));
+    }
+    
+    public function ambilSemuaReservasi(){
+        $this->session->set_userdata('data_reservasi', $this->MReservasi->getAllReservasi());
+    }
 
+    public function masukLihatReservasi(){
+        if($this->session->userdata('data_akun')[0]->jabatan!="admin"){
+            $this->ambilReservasiUser();
+        }else{
+            $this->ambilSemuaReservasi();
+        }
+        $this->load->view('VReservasi');
     }
 
     public function masukLihatJadwal(){

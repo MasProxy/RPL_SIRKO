@@ -43,7 +43,7 @@
 
     <form action="<?php echo site_url('CKelas/tambahReservasi')?>" method="post">
         Hari<br><input class="form-control" type="text" name="hari"><br><br>
-        Waktu<br><input class="form-control" type="text" name="Waktu"><br><br>
+        Waktu<br><input class="form-control" type="text" name="waktu"><br><br>
         Alasan<br> <input class="form-control" type="text" name="alasan"><br><br>
         <br>
         <input class="" type="submit" name="submit" value="Ajukan Reservasi">
