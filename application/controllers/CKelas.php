@@ -72,5 +72,13 @@ class CKelas extends CI_Controller {
         redirect(site_url('CKelas'));
     }
 
+    public function selesaiReservasi(){
+        $status = $this->input->post('status');
+        $id = $this->input->post('tampungid');
+        $this->MReservasi->finishReservasi($id,$status);
+        $this->ambilSemuaReservasi();
+        $this->load->view('VReservasi');
+    }
+
     
 }

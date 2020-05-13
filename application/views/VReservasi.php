@@ -49,7 +49,19 @@
                             <td>'.$d->waktu.'</td>
                             <td>'.$d->alasan.'</td>
                             <td>'.$d->status_reservasi.'</td>
-                            <td>testtt</td>
+                            <td>
+                                <form action="'.site_url('CKelas/selesaiReservasi').'" method="post">
+                                    <input type="hidden" name ="status" value="Diterima">
+                                    <input type="hidden" name ="tampungid" value="'.$d->id.'">
+                                    <input class="btn-primary" type="submit" name="submit" value="Terima">
+                                </form>
+                                
+                                <form action="'.site_url('CKelas/selesaiReservasi').'" method="post">
+                                    <input type="hidden" name ="status" value="Ditolak">
+                                    <input type="hidden" name ="tampungid" value="'.$d->id.'">
+                                    <input class="btn btn-primary" type="submit" name="submit" value="Tolak">
+                                </form>
+                            </td>
                         </tr>
                         ';
                     }

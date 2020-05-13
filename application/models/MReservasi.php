@@ -17,11 +17,10 @@ class MReservasi extends CI_Model {
     }
 
     public function getUserReservasi($id_akun){
-        $hasil = $this->db->query("SELECT akun.nama, kelas.kode_kelas, reservasi.waktu, reservasi.hari, reservasi.status_reservasi, reservasi.alasan FROM (reservasi INNER JOIN kelas on reservasi.id_kelas=kelas.id) INNER JOIN akun on reservasi.id_akun=akun.id_akun
+        $hasil = $this->db->query("SELECT reservasi.id,akun.nama, kelas.kode_kelas, reservasi.waktu, reservasi.hari, reservasi.status_reservasi, reservasi.alasan FROM (reservasi INNER JOIN kelas on reservasi.id_kelas=kelas.id) INNER JOIN akun on reservasi.id_akun=akun.id_akun
         WHERE akun.id_akun='$id_akun' order by reservasi.status_reservasi asc");
         return $hasil->result();
     }
-    
     
     public function getAllReservasi(){
         $hasil = $this->db->query("SELECT reservasi.id,akun.nama, kelas.kode_kelas, reservasi.waktu, reservasi.hari, reservasi.status_reservasi, reservasi.alasan FROM (reservasi INNER JOIN kelas on reservasi.id_kelas=kelas.id) INNER JOIN akun on reservasi.id_akun=akun.id_akun order by reservasi.status_reservasi asc");
