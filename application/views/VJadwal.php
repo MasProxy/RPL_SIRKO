@@ -44,8 +44,8 @@
                             <td>'.$no.'</td>
                             <td>'.$d->kode_kelas.'</td>
                             <td>
-                                <form action="'.site_url('CKelas/ambilKelasPilihan').'" method="post">
-                                    <input type="hidden" name = tampungid value="'.$d->id_jadwal.'">
+                                <form action="'.site_url('CJadwal/masukEditJadwal').'" method="post">
+                                    <input type="hidden" name = "tampungid" value="'.$d->id_jadwal.'">
                                     <input class="form-control-plaintext" type="submit" name="submit" value="'.$d->mata_kuliah.'">
                                 </form>
                             </td>
@@ -63,6 +63,6 @@
     <br><br>
     
     <a href="<?php echo site_url('CKelas/masukAjukanReservasi');?>" class="btn btn-primary "role="button" aria-disabled="true">Reservasi Kelas Kosong</a>
-    <a href="<?php echo site_url('CJadwal/kembali');?>" class="btn btn-secondary "role="button" aria-disabled="true">Kembali</a>
+    <a href="<?php echo site_url('CKelas');?>" class="btn btn-secondary "role="button" aria-disabled="true">Kembali</a>
 </body>
 </html>
