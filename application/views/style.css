@@ -1,14 +1,6 @@
 
 body{
-    background: url('images/isola.jpg') no-repeat fixed center;
-}
-
-.Lheader{
-    height: 100px;
-    width: 300px;
-    position: fixed;
-    top: 0;
-    left: 0;
+    background: "images/upi.jpg"
 }
 
 img{
