@@ -2,6 +2,18 @@
 <html lang="en">
 <head>
 <style>
+    .bg{
+            background-image: url("<?php echo base_url('images/upi.jpg')?>");
+            opacity: .25;
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            position: absolute;
+            top:0;bottom:0;left:0;right:0;
+            z-index: -999;
+        }
     table{
         margin-left:auto; 
         margin-right:auto;
@@ -16,6 +28,7 @@
     <title>Selamat Datang di SIRKO</title>
 </head>
 <body>
+    <div class="bg"></div>
     <a href="<?php echo site_url('CKelas');?>" class="btn btn-primary "role="button" aria-disabled="true">Kembali</a>
 
     <table class="table-bordered">
