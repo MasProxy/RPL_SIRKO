@@ -68,12 +68,11 @@
             ?>
         </tbody>
     </table>
-    <br><br>
+    <br>
     <form action="<?php echo site_url('CKelas/tambahReservasi')?>" method="post">
         Hari<br><input class="form-control" type="text" name="hari"><br>
         Waktu<br><input class="form-control" type="text" name="waktu"><br>
         Alasan<br> <input class="form-control" type="text" name="alasan"><br>
-        <br>
         <input class="btn btn-primary" type="submit" name="submit" value="Ajukan Reservasi">
     </form>
     <br>
