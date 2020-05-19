@@ -5,7 +5,6 @@
         .bg{
             background-image: url("<?php echo base_url('images/isola.jpg')?>");
 
-            opacity: .25;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -15,6 +14,12 @@
             z-index: -999;
         }
 
+        .wrapper{
+            margin-left: 40%;
+            margin-right: 40%;
+            opacity: .90;
+        }
+
         img{
             max-width: 100%;
             max-height: 100%;
@@ -22,9 +27,9 @@
 
         form{
             text-align: center;
-            margin-left: 35%;
-            margin-right: 35%;
-            width: 30%;
+            margin-left: 10%;
+            margin-right: 10%;
+            width: 80%;
         }
 
         .form-control{
@@ -42,18 +47,20 @@
 <body>
 <div class="bg"></div>
     <div class="row">
-        <div class="col-md-1"><a class="navbar-brand" ><img src="<?php echo base_url()?>images/upi.jpg"></a></div>
-        <div class="col-md-2"><h1 style="font-size:40px">SIRKO</h1><h2 style="font-size:12px">Universitas Pendidikan Indonesia</h2></div>
+        <div class="col-sm-1"><a class="navbar-brand" ><img src="<?php echo base_url()?>images/upi.jpg"></a></div>
+        <div class="col-2"><h1 style="font-size:40px">SIRKO</h1><h2 style="font-size:12px">Universitas Pendidikan Indonesia</h2></div>
     </div>
     <br>
     <br>
     <p>
-        <form action="<?php echo site_url('CAkun/verifikasi')?>" method="post">
-            Username<br><input class="form-control" type="text" name="username"><br><br>
-            Password<br> <input class="form-control" type="password" name="password"><br><br>
-            <br>
-            <input type="submit" name="submit" value="Masuk">
-        </form>
+        <div class="card wrapper">
+            <form action="<?php echo site_url('CAkun/verifikasi')?>" method="post">
+                Username<br><input class="form-control" type="text" name="username"><br><br>
+                Password<br> <input class="form-control" type="password" name="password"><br><br>
+                <br>
+                <input class="btn btn-primary" type="submit" name="submit" value="Masuk">
+            </form>
+        </div>
     </p>
 </body>
 </html>

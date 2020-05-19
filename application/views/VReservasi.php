@@ -2,22 +2,17 @@
 <html lang="en">
 <head>
     <style>
-    .bg{
-        background-image: url("<?php echo base_url('images/upi.jpg')?>");
-        opacity: .25;
-
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-
-        position: absolute;
-        top:0;bottom:0;left:0;right:0;
-        z-index: -999;
+    table{
+        margin-left:auto; 
+        margin-right:auto;
+        text-align: center;
     }
-        table{
-            margin-left:auto; 
-            margin-right:auto;
-        }
+    table.table-bordered > thead > tr > th{
+        border:2px solid black;
+    }
+    table.table-bordered > tbody > tr > td{
+        border:2px solid black;
+    }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,9 +23,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></head>
 </head>
 <body>
-<div class="bg"></div>
+<div class="p-3 mb-2 bg-danger"></div>
 <a href="<?php echo site_url('CKelas');?>" class="btn btn-primary "role="button" aria-disabled="true">Kembali</a>
-    <table class="table-bordered">
+    <table class="table-bordered table-striped">
         <thead>
             <tr>
             <th>No</th>

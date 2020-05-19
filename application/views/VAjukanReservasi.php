@@ -2,29 +2,28 @@
 <html lang="en">
 <head>
 <style>
-    .bg{
-            background-image: url("<?php echo base_url('images/upi.jpg')?>");
-            opacity: .25;
-
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-
-            position: absolute;
-            top:0;bottom:0;left:0;right:0;
-            z-index: -999;
-        }
     form{
-            text-align: center;
-            margin-left: 35%;
-            margin-right: 35%;
-            width: 30%;
-        }
-
+        text-align: center;
+        margin-left: 35%;
+        margin-right: 35%;
+        width: 30%;
+    }
     .form-control{
-            text-align: center;
-            display: inline-block;
-        }
+        text-align: center;
+        display: inline-block;
+    }
+
+    table{
+        margin-left:auto; 
+        margin-right:auto;
+        text-align: center;
+    }
+    table.table-bordered > thead > tr > th{
+        border:2px solid black;
+    }
+    table.table-bordered > tbody > tr > td{
+        border:2px solid black;
+    }
 </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,8 +34,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></head>
 </head>
 <body>
-    <div class="bg"></div>
-    <table class="table-Bordered">
+<div class="p-3 mb-2 bg-danger"></div>
+    <a href="<?php echo site_url('CJadwal');?>" class="btn btn-primary "role="button" aria-disabled="true">Kembali</a>
+    <br>
+    <br>
+    <table class="table-bordered table-striped">
         <thead>
             <tr>
             <th>No</th>
@@ -66,13 +68,24 @@
             ?>
         </tbody>
     </table>
-
+    <br><br>
     <form action="<?php echo site_url('CKelas/tambahReservasi')?>" method="post">
-        Hari<br><input class="form-control" type="text" name="hari"><br><br>
-        Waktu<br><input class="form-control" type="text" name="waktu"><br><br>
-        Alasan<br> <input class="form-control" type="text" name="alasan"><br><br>
+        Hari<br><input class="form-control" type="text" name="hari"><br>
+        Waktu<br><input class="form-control" type="text" name="waktu"><br>
+        Alasan<br> <input class="form-control" type="text" name="alasan"><br>
         <br>
-        <input class="" type="submit" name="submit" value="Ajukan Reservasi">
+        <input class="btn btn-primary" type="submit" name="submit" value="Ajukan Reservasi">
     </form>
+    <br>
+    <div class="row">
+        <div class="col text-center">
+            <?php echo '*Waktu Operasi kelas jam 7.00 sampai dengan jam 17.00' ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center">
+            <?php echo '*Apabila reservasi dilakukan untuk kelas pengganti kuliah, mohon cantumkan nama mata kuliah' ?>
+        </div>
+    </div>
 </body>
 </html>
