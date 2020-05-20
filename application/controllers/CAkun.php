@@ -19,8 +19,11 @@ class CAkun extends CI_Controller {
         if($this->MAkun->getid($username, $password)!=NULL){
             $this->session->set_userdata('id_akun', $this->MAkun->getid($username, $password));
             $this->session->set_userdata('data_akun', $this->MAkun->getdata($this->session->userdata('id_akun')));
+            $this->session->set_userdata('data_notif', 0);
             redirect(site_url('CKelas'));
         }else{
+            $notif=-1;
+            $this->session->set_userdata('data_notif', $notif);
             redirect(site_url());
         }
     }

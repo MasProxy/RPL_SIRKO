@@ -86,8 +86,26 @@
     </table>
 
     <br><br>
-        <div class="row">
-            <div class="col-sm text-center"><a href="<?php echo site_url('CKelas/masukAjukanReservasi');?>" class="btn btn-primary "role="button" aria-disabled="true">Reservasi Kelas Kosong</a></div>
-        </div>
+    <?php
+        if($this->session->userdata('data_akun')[0]->jabatan!="admin"){
+            echo'
+            <div class="row">
+                <div class="col-sm text-center"><a href="'.site_url('CKelas/masukAjukanReservasi').'" class="btn btn-primary "role="button" aria-disabled="true">Reservasi Kelas Kosong</a></div>
+            </div>
+            ';
+        }
+    ?>
+
+    <?php    
+    if($this->session->userdata('data_notif')==2){
+        echo'
+        <script>
+            alert("Berhasil mengubah jadwal!");
+        </script>
+        
+        ';
+        $this->session->set_userdata('data_notif', 0);
+    }
+    ?>
 </body>
 </html>

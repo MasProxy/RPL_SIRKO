@@ -8,7 +8,7 @@ class MKelas extends CI_Model {
     }
     
     public function getAllKelas(){
-        $hasil= $this->db->query("SELECT * FROM kelas  order by lantai and id_gedung asc");
+        $hasil= $this->db->query("SELECT * FROM kelas  order by id_gedung asc");
         return $hasil->result();
     }
 }

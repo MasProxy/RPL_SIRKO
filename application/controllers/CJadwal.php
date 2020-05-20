@@ -34,6 +34,7 @@ class CJadwal extends CI_Controller {
         $jam_mulai = $this->input->post('jam_mulai');
         $jam_selesai = $this->input->post('jam_selesai');
         $this->MJadwal->updateJadwal($id_jadwal, $id_kelas, $jam_mulai, $jam_selesai, $hari);
+        $this->session->set_userdata('data_notif', 2);
         redirect(site_url('CJadwal'));
     }
 }

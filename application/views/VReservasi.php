@@ -84,5 +84,15 @@
             ?>
         </tbody>
     </table>
+    <?php
+        if($this->session->userdata('data_notif')==3){
+            echo'
+            <script>
+                alert("Reservasi Berhasil di Selesaikan");
+            </script>
+            ';
+        }
+        $this->session->set_userdata('data_notif',0);
+    ?>
 </body>
 </html>

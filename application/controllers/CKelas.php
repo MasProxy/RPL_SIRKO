@@ -18,6 +18,7 @@ class CKelas extends CI_Controller {
         $waktu = $this->input->post('waktu');
         $status = "Pending";
         $this->MReservasi->addReservasi($id_akun, $id_kelas, $hari, $waktu, $status, $alasan);
+        $this->session->set_userdata('data_notif',1);
         redirect(site_url('CKelas'));
     }
 
@@ -50,6 +51,7 @@ class CKelas extends CI_Controller {
         $id = $this->input->post('tampungid');
         $this->MReservasi->finishReservasi($id,$status);
         $this->ambilSemuaReservasi();
+        $this->session->set_userdata('data_notif', 3);
         $this->load->view('VReservasi');
     }
 
