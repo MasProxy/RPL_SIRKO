@@ -63,6 +63,7 @@
                         <td>'.$d->jam_mulai.'-'.$d->jam_selesai.'</td>
                     </tr>
                     ';
+                    $no++;
                 }
             ?>
         </tbody>
