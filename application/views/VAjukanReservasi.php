@@ -36,8 +36,7 @@
 <body>
 <div class="p-3 mb-2 bg-danger"></div>
     <a href="<?php echo site_url('CJadwal');?>" class="btn btn-primary "role="button" aria-disabled="true">Kembali</a>
-    <br>
-    <br>
+    <br><br>
     <table class="table-bordered table-striped">
         <thead>
             <tr>
@@ -78,7 +77,7 @@
     <br>
     <div class="row">
         <div class="col text-center">
-            <?php echo '*Waktu Operasi kelas jam 7.00 sampai dengan jam 17.00' ?>
+            <?php echo '*Waktu Operasi kelas jam 7:00 sampai dengan jam 17:00' ?>
         </div>
     </div>
     <div class="row">

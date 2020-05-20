@@ -13,6 +13,17 @@
     table.table-bordered > tbody > tr > td{
         border:2px solid black;
     }
+
+    form{
+        text-align: center;
+        margin-left: 35%;
+        margin-right: 35%;
+        width: 30%;
+    }
+    .form-control{
+        text-align: center;
+        display: inline-block;
+    }
 </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +35,8 @@
 </head>
 <body>
     <div class="p-3 mb-2 bg-danger"></div>
+    <a href="<?php echo site_url('CJadwal');?>" class="btn btn-primary "role="button" aria-disabled="true">Kembali</a>
+    <br>
     <table class="table-bordered table-striped">
         <thead>
             <tr>
@@ -54,6 +67,7 @@
             ?>
         </tbody>
     </table>
+    <br>
     <form action="<?php echo site_url('CJadwal/editJadwal')?>" method="post">
         Kelas<br>
         <select class="custom-select" name="kelas">
@@ -67,7 +81,7 @@
             ?>
             
         </select>
-        
+        <br><br>
         Hari<br>
         <select class="custom-select" name="hari">
             <option selected>Pilih Hari</option>
@@ -77,12 +91,19 @@
             <option value="Kamis">Kamis</option>
             <option value="Jum'at">Jum'at</option>
             
-        </select><br>
+        </select>
+        <br><br>
         Jam Mulai<br> <input class="form-control" type="text" name="jam_mulai">
+        <br>
         Jam Selesai<br> <input class="form-control" type="text" name="jam_selesai">
         <br>
         <input class="btn btn-primary" type="submit" name="submit" value="SIMPAN">
     </form>
-    <a href="<?php echo site_url('CJadwal');?>" class="btn btn-secondary "role="button" aria-disabled="true">Kembali</a>
+    <br>
+    <div class="row">
+        <div class="col text-center">
+            <?php echo '*format waktu yg di terima jj:mm' ?>
+        </div>
+    </div>
 </body>
 </html>
